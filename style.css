@@ -1,0 +1,107 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    /* outline: 2px solid rgb(255, 0, 0) !important; */
+}
+:root{
+    --body-colour: #081D22;
+    --body-colour2:#2f3e51;
+    --heading-colour: #90f109;
+    --icon-colour: #f8ff32;
+    --iconHover-colour: #10dbff;
+    --text-colour: white;
+}
+body{
+    background-color: var(--body-colour);
+}
+/*------------------------------------Navbar--------------  */
+header{
+    background-color: var(--body-colour2);
+}
+.k{
+    width: 25px;
+    padding: 2px;
+}
+li{
+    list-style: none;
+}
+.myNav-link{
+    color: white;
+    text-decoration: none;
+    transition: 0.7s ease;
+}
+.myNav-link:hover{
+    color: var(--iconHover-colour);
+}
+.myNavbar{
+    min-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+.myNav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+.hamburger-menu{
+    display: none;
+    cursor: pointer;
+}
+.h-bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+/*------------------------------------Hello-----------------*/
+
+/*------------------------------------Projects------------- */
+
+/*------------------------------------About Me--------------*/
+
+/*------------------------------------Form------------------*/
+
+/*------------------------------------Footer----------------*/
+
+/*------------------------------------Media queries---------*/
+@media(max-width:768px){
+    /* ---------------------NavBar------------------------- */
+    .hamburger-menu{
+        display: block;
+    }
+    .hamburger-menu.active .h-bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger-menu.active .h-bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger-menu.active .h-bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .myNav-menu{
+        position: fixed;
+        right: -100%;
+        top: 50px;
+        gap: 0;
+        flex-direction: column;
+        background-color: var(--body-colour2);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+    .myNav-item{
+        margin: 16px 0;
+    }
+    .myNav-menu.active{
+        right: 0;
+    }
+}
