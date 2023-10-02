@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    outline: 2px solid rgb(255, 0, 0) !important;
+    /* outline: 2px solid rgb(255, 0, 0) !important; */
     color: white;
 }
 :root{
@@ -23,6 +23,7 @@ header{
     position: fixed; 
     top: 0;
     width: 100%;
+    z-index: 100;
 }
 .k{
     width: 25px;
@@ -156,5 +157,12 @@ li{
     }
     .myNav-menu.active{
         right: 0;
+    }
+    /* --------------landing */
+    #landing{
+        grid-template-columns: auto;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "hello-text" 
+                            "hello-img";
     }
 }
