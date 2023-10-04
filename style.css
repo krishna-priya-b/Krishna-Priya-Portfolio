@@ -200,6 +200,22 @@ form{
 }
 
 /*------------------------------------Footer----------------*/
+footer{
+    margin-block-start: 20px;
+    height: 200px;
+    background-color: var(--body-colour2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 50px;
+}
+.links{
+    display: flex;
+    gap: 20px;
+}
+.mailid{
+    margin: 20px;
+}
 
 /*------------------------------------Media queries---------*/
 @media(max-width:768px){
@@ -240,5 +256,21 @@ form{
         grid-template-rows: 1fr 1fr;
         grid-template-areas: "hello-text" 
                             "hello-img";
+    }
+    .hello-text{
+        font-size: 1.3rem;
+    }
+    .myname{
+        font-size: 1.5rem;
+    }
+    @keyframes hello{
+        0%{
+            left: -5px;
+            opacity: 0;
+        }
+        100%{
+            left: 100px;
+            opacity: 100%;
+        }
     }
 }

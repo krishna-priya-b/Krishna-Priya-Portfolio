@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <!-- Font awesome -->
     <script src="https://kit.fontawesome.com/ab9e253226.js" crossorigin="anonymous"></script>
-
+    <!-- Fond -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
@@ -14,6 +14,8 @@
 
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
     <title>Krishna Priya- Portfolio</title>
+    <!-- Library for animation on scroll -- link https://github.com/michalsnik/aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> 
 </head>
 <body>
     <header>
@@ -47,7 +49,7 @@
     </header>
 
     <section id="landing">
-        <div class="hello-div">
+        <div class="hello-div" >
             <h3 class="white-text hello-text">Hello..!</h3>
             <h1 class="white-text hello-text">My name is <span class="myname">Krishna Priya</span></h1>
             <h2 class="white-text hello-text">I am a full-stack web developer</h2>
@@ -58,31 +60,33 @@
         </div>
     </section>
     
+    
+
 
     <section id="contact">       
         <form name="contact-form"
         action="https://script.google.com/macros/s/AKfycbzZjSVN7jgKHchRBwAkfAy1lGDVaSXMS7D5a6WNsET63EZyu87oN_Azrwu5M04CZ0VQeA/exec" 
         onsubmit="return validateAll()" 
-        method="post">
+        method="post" >
   
           <h2 class="white-text">Contact Me</h2>
   
-          <div class="form-div">
+          <div class="form-div" data-aos="zoom-in">
             <input type="text" id="name" name="name" class="form-input" placeholder="Your Name">
             <span id="name-varifiy" class="form-span"></span>
           </div>
   
-          <div class="form-div">
+          <div class="form-div" data-aos="zoom-in">
             <input type="text" id="phone" name="phone" class="form-input" placeholder="Phone Number">
             <span id="phone-varifiy" class="form-span"></span>
           </div>
   
-          <div class="form-div">
+          <div class="form-div" data-aos="zoom-in">
             <input type="text" id="email" name="email" class="form-input" placeholder="Email ID">
             <span id="email-varifiy" class="form-span"></span>
           </div>
   
-          <div class="form-div">
+          <div class="form-div" data-aos="zoom-in">
             <textarea name="message" id="message" rows="10" class="form-input" placeholder="Message"></textarea>
             <span id="message-varifiy" class="form-span"></span>
           </div>
@@ -91,6 +95,22 @@
         </form>
       </section>
 
+      <footer>
+        <div class="links">
+          <a href="https://www.linkedin.com/in/krishnanairpb/" target="_blank"><i class="fa-brands fa-linkedin fa-2xl myNav-link"></i></a>
+          <a href="https://github.com/krishna-priya-b" target="_blank"><i class="fa-brands fa-square-github fa-2xl myNav-link"></i></a>
+        </div>
+        <div class="mailid">
+          <a href="mailto:krishna.nair.pb@gmail.com" target="_blank" style="text-decoration: none; color: #ffffff;">krishna.nair.pb@gmail.com</a>
+        </div>
+        <p class="white-text">&#169; 2023 Krishna Priya B</p>
+      </footer>
+
     <script src="script.js"></script>
+    <!-- Js for animate on scroll -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
